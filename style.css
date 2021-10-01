@@ -1,0 +1,64 @@
+body {
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#cbccc8)) fixed;
+   
+}
+
+#cv-form{
+    /* display: none; */
+}
+
+#cv-template{
+    display:none;
+    border: #000 solid 1px;
+}
+.myimg{
+    border-radius:50%;
+    width:200px;
+    height: 150px;
+}
+.background{
+    background-color: #8196c7;
+}
+
+.background1{
+    background-color: #e8ecf5;
+}
+
+.background2{
+    background-color: #fff;
+}
+
+.container{
+    width:100%
+}
+
+.name{
+    font-family: 'Yaldevi', sans-serif;
+}
+
+.name1{
+    margin-top:10px;
+    font-family: 'Yaldevi', sans-serif;
+    font-size:16px;
+}
+.name2{
+    margin-top:5px;
+    font-family: 'Yaldevi', sans-serif;
+    font-size:14px;
+    font-style: italic;
+}
+
+.name2{
+    margin-top:5px;
+    font-family: 'Yaldevi', sans-serif;
+    font-size:14px;
+}
+
+ul{
+    margin-top:5px;
+    font-family: 'Yaldevi', sans-serif;
+    font-size:14px;
+
+}
+
+

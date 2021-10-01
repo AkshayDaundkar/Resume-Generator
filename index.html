@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container" id="cv-form" style="width:100%; margin:5%">
+        <h1 class="text-center my-3">Resume Generator</h1>
+        <p class="text-center">By Learn code with PWD</p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Personal Information</h3>
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="nameField">Your Name</label>
+                    <input type="text" id="nameField" placeholder="Your Full Name" class="form-control" />
+                </div>
+                <!-- Contact -->
+                <div class="form-group mt-2">
+                    <label for="contactField">Your Contact Number</label>
+                    <input type="text" id="contactField" placeholder="Your Contact Number" class="form-control" />
+                </div>
+                <!-- Address -->
+                <div class="form-group mt-2">
+                    <label for="addressField">Your Address</label>
+                    <textarea rows="5" id="addressField" placeholder="Your Address" class="form-control"></textarea>
+                </div>
+
+                <!-- Email -->
+
+                <div class="form-group mt-2">
+                        <label for="emailField">Email Address</label>
+                        <input type="email" rows="5" id="emailField" placeholder="Email Address" class="form-control"/>
+                </div>
+
+
+                <div class="form-group mt-3">
+                    <label>Select your Photo</label>
+                    <input id="imgField" type="file" class="form-control">
+                </div>
+                <hr>
+                <p class="text-secondary mt-3">Important Links</p>
+
+                <!-- Fb Link -->
+                <div class="form-group ">
+                    <label for="fbField">Facebook</label>
+                    <input type="text" id="fbField" placeholder="Enter Here" class="form-control" />
+                </div>
+                <!-- LinkedIn -->
+                <div class="form-group mt-2">
+                    <label for="linkedField">linkdenIn</label>
+                    <input type="text" id="linkedField" placeholder="Enter Here" class="form-control" />
+                </div>
+                <!-- Contact -->
+                <div class="form-group mt-2">
+                    <label for="instatField">Instagram</label>
+                    <input type="text" id="instaField" placeholder="Enter Here" class="form-control" />
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <h3>Professional Information</h3>
+
+                <!-- Objective -->
+                <div class="form-group mt-2">
+                    <label for="">Objective</label>
+                    <textarea id="objectiveField" rows="3" class="form-control" placeholder="Objective"></textarea>
+                </div>
+                <hr>
+                <!-- Work experience -->
+                <div class="form-group mt-2" id="we">
+                    <label for="">Work Experience</label>
+                    <textarea rows="3" class="form-control weField" placeholder="Objective"></textarea>
+                    <!-- New textarea -->
+                    <div class="container text-center mt-3" id="weAddButton">
+                        <button onclick="addNewWEField()" class="btn btn-primary ">Add Experience</button>
+                    </div>
+                </div>
+
+                <hr>
+                <!-- Academic experience -->
+                <div class="form-group mt-2" id="eq">
+                    <label for="">Academic Experience</label>
+                    <textarea rows="3" class="form-control eqField" placeholder="Objective"></textarea>
+                    <div class="container text-center mt-3" id="eqAddButton">
+                        <button onclick="addNewAEField()" class="btn btn-primary ">Add Experience</button>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="form-group mt-2" id="es">
+                        <label for="">Skills</label>
+                        <textarea rows="3" class="form-control esField" placeholder="Skills"></textarea>
+                        <div class="container text-center mt-3" id="esAddButton">
+                            <button onclick="addNewASField()" class="btn btn-primary ">Add Skills</button>
+                        </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container text-center mt-5">
+            <button onclick="generateCV()" class="btn btn-danger">Generate CV</button>
+        </div>
+    </div>
+
+    <!-- CV Template -->
+    <div class="container" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 py-5 text-center background">
+                <!-- 1st Column -->
+                <img id="imgTemplate" src="https://cediaexpo.com/wp-content/uploads/2021/07/default-avatar.png" alt=""
+                    class="img-fluid myimg" style="height: 200px;">
+                <div class="container">
+                    <p id="nameT1" style="font-size:20px;">Akshay Daundkar</p>
+                    <p id="emailT1" style="font-size:15px; color:blue; font-style: italic;;">akshaydaundkar01@gmail.com</p>
+                    <p id="contactT1" style="font-size:15px;">+91 9119516388 / +91 7028411233</p>
+                    <p id="addressT1" class="name">INNDRYANI NAGAR BHOSARI PUNE 26,INDIA</p>
+                    <hr>
+                    <p><a style="color: blue; text-align: center; font-size: 14px; font-style:italic ;" id="fbT" href="#1">"http://www.google.com"</a></p>
+                    <p><a style="color: blue; text-align: center; font-size: 14px; font-style:italic ;" id="instaT" href="#1">"http://www.google.com"</a></p>
+                    <p><a style="color: blue; text-align: center; font-size: 14px; font-style:italic ;" id="linkedT" href="#1">"http://www.google.com"</a></p>
+
+                </div>
+            </div>
+            <div class="col-md-8 py-5 background1">
+                <!-- 2nd Column -->
+                <h1 id="nameT2" class="text-center name" style="font-weight: 400;">Akshay Daundkar</h1>
+
+                <!-- card -->
+                <div class="card mt-5 border-dark" style="background-color: #e8ecf5">
+                    <div class="card-header" style="background-color: #8196c7;">
+                        <h3 class="name1">PROFESSIONAL SUMMARY</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objectiveT" class="name2">Receives product from domestic and overseas vendors, stock
+                            transfers from other L'Oreal facilities, customer returns, refused shipments, and
+                            non-inventory support products. Accurately audits and verifies all incoming quantities for
+                            entry into computerized inventory</p>
+                    </div>
+                </div>
+                <!-- Card2 -->
+                <div class="card mt-4 border-dark" style="background-color: #e8ecf5">
+                    <div class="card-header" style="background-color: #8196c7;">
+                        <h3 class="name1">WORK EXPERIENCE</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="weT">
+                        <li>Make recommendations for improvements to work processes. Contribute to 5S program in work
+                            area
+                            Provide information and suggestions.</li>
+                        <li>Provide a high level of service to all internal and external customers. Contribute to
+                            positive teamwork environment
+                            Ensures proper care in the use and maintenance of equipment and supplies; promotes
+                            continuous improvement.</li>
+                        <li>Provide a high level of service to all internal and external customers. Contribute to
+                            positive teamwork.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card mt-4 border-dark" style="background-color: #e8ecf5">
+                    <div class="card-header" style="background-color: #8196c7;">
+                        <h3 class="name1">ACADEMIC QUALIFICATION</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="aqT">
+                            <li>Make recommendations for improvements to work processes. Contribute to 5S program in
+                                work area
+                                Provide information and suggestions.</li>
+                            <li>Provide a high level of service to all internal and external customers. Contribute to
+                                positive teamwork environment
+                                Ensures proper care in the use and maintenance of equipment and supplies; promotes
+                                continuous improvement.</li>
+                            <li>Provide a high level of service to all internal and external customers. Contribute to
+                                positive teamwork.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card mt-4 border-dark" style="background-color: #e8ecf5">
+                        <div class="card-header" style="background-color: #8196c7;">
+                            <h3 class="name1">Skills</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul id="asT">
+                                <li>Make recommendations for improvements.</li>
+                                <li>Provide a high level of service.</li>
+                                <li>Provide a high level of service to all internal.</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+
+                <div class="container mt-3 text-center">
+                    <button id="pri" onclick="printCV()" class="btn btn-primary">Print CV</button>
+                </div>
+            </div>
+
+            <div class="col-xs-12 py-5 px-5 background1">
+                <p>“I hereby declare that the details and information given above are complete and true to the best of my knowledge”</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Work Experience -->
+    <!-- <div class="container" id="cv-template">
+                <div class="row">
+                    <div class="col-md-4 py-5 text-center"></div>
+                    <div class="col-md-8 py-5 background3 " style="margin-top:-20%">
+                        <div class="card mt-4 ">
+                            <div class="card-header">
+                                <h3>Objective</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe minima cupiditate
+                                    fuga natus
+                                    vitae et ratione distinctio? Illum eos aut porro voluptate distinctio, cumque
+                                    blanditiis
+                                    magnam
+                                    autem necessitatibus eius repellendus temporibus voluptates earum minus, dolorem
+                                    eum? Quos
+                                    animi
+                                    voluptas repellendus, inventore laudantium consequuntur quam eum natus accusantium
+                                    vel?
+                                    Suscipit, asperiores.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
